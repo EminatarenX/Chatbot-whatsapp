@@ -21,7 +21,7 @@ client.on('ready', () => {
 });
 
 client.on('message', async message => {
-	if(message.body.match('/nataren|Emi|Emiliano|bot|oye|wey|we|contesta|Oye|emi/i')) {
+	if(message.body.match('/nataren|Emi|Emiliano|bot|oye|wey|we|contesta|Oye|emiBuenos dias|buenos dias|Hola/i')) {
 		message.reply('Hola, Estas hablando con el bot de Emi, en que puedo ayudarte?🧐 \n\nEmi estará de vuelta en unos instantes :D \n\nPara ver los comandos disponibles escribe: \n/help');
 	}
 
