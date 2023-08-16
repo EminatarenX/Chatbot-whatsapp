@@ -7,6 +7,7 @@ const client = new Client({
     puppeteer: {
         args: ['--no-sandbox']
     },
+    authStrategy: new LocalAuth({ clientId: 'whatsapp-bot-emi'}),
 });
 
 client.on('qr', qr => {
