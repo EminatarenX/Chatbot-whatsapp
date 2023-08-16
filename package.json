@@ -1,0 +1,19 @@
+{
+  "name": "wbot",
+  "version": "1.0.0",
+  "description": "bot de whatsapp para stickers",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "Emiliano Nataren Del Rivero",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.22.1"
+  }
+}
