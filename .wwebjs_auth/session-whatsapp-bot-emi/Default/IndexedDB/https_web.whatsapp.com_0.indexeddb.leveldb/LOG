@@ -1,0 +1,7 @@
+2023/08/16-14:41:37.185 3e44 Creating DB C:\Users\Emi\Desktop\wbot\.wwebjs_auth\session-whatsapp-bot-emi\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb since it was missing.
+2023/08/16-14:41:37.188 3e44 Reusing MANIFEST C:\Users\Emi\Desktop\wbot\.wwebjs_auth\session-whatsapp-bot-emi\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/08/16-14:41:37.286 1f18 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/08/16-14:41:37.721 122c Level-0 table #5: started
+2023/08/16-14:41:37.724 122c Level-0 table #5: 21420 bytes OK
+2023/08/16-14:41:37.725 122c Delete type=0 #3
+2023/08/16-14:41:37.740 122c Manual compaction at level-0 from '\x00\x06\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x07\x00\x00\x00' @ 0 : 0; will stop at (end)
