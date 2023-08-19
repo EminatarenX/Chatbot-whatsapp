@@ -1,6 +1,5 @@
-[0818/214121.803:ERROR:backend_impl.cc(2019)] Invalid file version or magic
-[0818/214121.885:WARNING:sqlite_persistent_store_backend_base.cc(178)] Cookie database is too new.
-[0818/214121.909:ERROR:backend_impl.cc(2009)] Invalid file version or magic
-[0818/214122.595:ERROR:indexed_db_factory_impl.cc(926)] IndexedDB backing store had unknown schema, treating it as failure to open.
-[0818/214122.596:ERROR:indexed_db_factory_impl.cc(715)] Got corruption for { origin: https://web.whatsapp.com, top-level site: https://whatsapp.com, nonce: <null>, ancestor chain bit: Same-Site }, Unknown corruption
-[0818/214122.607:ERROR:indexed_db_factory_impl.cc(849)] IndexedDB recovering from a corrupted (and deleted) database.
+[0818/231636.712:INFO:CONSOLE(118)] "Uncaught (in promise) TypeError: Failed to execute 'put' on 'Cache': Partial response (status code 206) is unsupported", source: https://web.whatsapp.com/serviceworker.js (118)
+[0818/231647.205:INFO:CONSOLE(118)] "Uncaught (in promise) TypeError: Failed to execute 'put' on 'Cache': Partial response (status code 206) is unsupported", source: https://web.whatsapp.com/serviceworker.js (118)
+[0818/231647.226:INFO:CONSOLE(118)] "Uncaught (in promise) TypeError: Failed to execute 'put' on 'Cache': Partial response (status code 206) is unsupported", source: https://web.whatsapp.com/serviceworker.js (118)
+[0818/231650.290:INFO:CONSOLE(30)] "TypeError: Cannot read properties of undefined (reading 'toString')", source: https://web.whatsapp.com/vendor1~app.7f14216f970118f62a35.js (30)
+[0818/231650.424:INFO:CONSOLE(30)] "TypeError: Cannot read properties of undefined (reading 'toString')", source: https://web.whatsapp.com/vendor1~app.7f14216f970118f62a35.js (30)

@@ -1,5 +1,6 @@
 const qrcode = require('qrcode-terminal');
 const { buscarVideo, youtubeURL } = require('./helpers/index.js');
+const { generarRespuesta } = require('./helpers/gpt.js');
 
 require('dotenv').config()
 
@@ -14,7 +15,7 @@ const client = new Client({
 });
 
 client.on('qr', qr => {
-    // qrcode.generate(qr, {small: true});
+    qrcode.generate(qr, {small: true});
     console.log(qr)
 });
 
@@ -24,7 +25,7 @@ client.on('ready', () => {
 });
 
 client.on('message', async message => {
-	if(message.body.match('/nataren|Emi|Emiliano|bot|oye|wey|we|contesta|Oye|emiBuenos dias|buenos dias|Hola/i')) {
+	if(message.body.match('/nataren|Emi|Emiliano|bot|buenos dias|Hola/i')) {
 		message.reply('Hola, Estas hablando con el bot de Emi, en que puedo ayudarte?🧐 \n\nEmi estará de vuelta en unos instantes :D \n\nPara ver los comandos disponibles escribe: \n/help');
         return
     }
@@ -41,7 +42,7 @@ client.on('message', async message => {
     }
 
     if(message.body === '/help') {
-        message.reply('Estos son los comandos disponibles: \n\n-sticker: \nConvierte una imagen en sticker👌🏼 \n\n-song: \nBusca una cancion de Youtube🎥 \n\nsi escribes mi nombre automáticamente el bot responderá un mensaje por predeterminado 👾.');
+        message.reply('Estos son los comandos disponibles: \n\n-sticker: \nConvierte una imagen en sticker👌🏼 \n\n-song: \nBusca una cancion de Youtube🎥 \n\n-chat:\nChatea conmigo🧐!\n\nsi escribes mi nombre automáticamente el bot responderá un mensaje por predeterminado 👾.');
         return
     }
 
@@ -59,6 +60,17 @@ client.on('message', async message => {
 
         message.reply(`🔎 ${songEncontrado.snippet.title}\n\n${url}`);
         return
+    }
+
+    if(message.body.includes('-chat') && message.body.replace('-chat','').length === 0){
+        message.reply('Escribe -chat + *mensaje que quieras enviar* \n\nEjemplo:\n-chat Hola😇.');
+        return
+    }else if(message.body.includes('-chat') && message.body.replace('-chat','').length > 0){
+        const mensaje = message.body.replace('-chat ','')
+
+        const response = await generarRespuesta(mensaje)
+
+        message.reply(response);
     }
     
 });
