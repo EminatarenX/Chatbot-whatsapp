@@ -12,7 +12,8 @@ async function generarRespuesta (promp){
     const response = await openai.chat.completions.create({
       messages: [{ 
         role: 'user', 
-        content: promp
+        content: `chat, despues del siguiente promp recuerda dar respuestas 
+                  cortas, no mas de 100 palabras: { ${promp} }`
         
       }],
       model: 'gpt-3.5-turbo',
