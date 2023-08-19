@@ -1,7 +1,6 @@
 const qrcode = require('qrcode-terminal');
 const { buscarVideo, youtubeURL } = require('./helpers/index.js');
-const fs = require('fs')
-const ytdl = require('ytdl-core');
+
 require('dotenv').config()
 
 
@@ -10,13 +9,12 @@ const { Client, MessageMedia, LocalAuth } = require('whatsapp-web.js');
 const client = new Client({
     puppeteer: {
         args: ['--no-sandbox'],
-        executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
     },
     authStrategy: new LocalAuth({ clientId: 'whatsapp-bot-emi'}),
 });
 
 client.on('qr', qr => {
-    qrcode.generate(qr, {small: true});
+    // qrcode.generate(qr, {small: true});
     console.log(qr)
 });
 
